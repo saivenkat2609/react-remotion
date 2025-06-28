@@ -101,7 +101,7 @@ export const makeRenderQueue = ({
             data: job.data,
           });
         },
-        outputLocation: path.join(rendersDir, `${jobId}.mp4`),
+        outputLocation: path.join(rendersDir, `video.mp4`),
       });
 
       jobs.set(jobId, {

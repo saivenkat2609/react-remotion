@@ -11,7 +11,7 @@ const { PORT = 3001, REMOTION_SERVE_URL } = process.env;
 function setupApp({ remotionBundleUrl }: { remotionBundleUrl: string }) {
   const app = express();
 
-  const rendersDir = path.resolve("renders");
+  const rendersDir =process.env.STATIC_DIR;
 
   const queue = makeRenderQueue({
     port: Number(PORT),
