@@ -12,7 +12,8 @@ function setupApp({ remotionBundleUrl }: { remotionBundleUrl: string }) {
   const app = express();
 
   const rendersDir =process.env.STATIC_DIR;
-
+  console.log(rendersDir);
+  
   const queue = makeRenderQueue({
     port: Number(PORT),
     serveUrl: remotionBundleUrl,
@@ -104,7 +105,7 @@ async function main() {
 
   const app = setupApp({ remotionBundleUrl });
 
-  app.listen(PORT, () => {
+  app.listen(PORT,'0.0.0.0', () => {
     console.info(`Server is running on port ${PORT}`);
   });
 }
